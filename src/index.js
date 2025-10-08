@@ -7,7 +7,15 @@ function verificarPalindromo() {
     let invertido = limpio.split('').reverse().join('');
 
    // let resultado = document.getElementById("resultado");
-
+    if (texto === "") {
+      Swal.fire({
+        icon: "warning",
+        title: "Oye viejo...",
+        text: "¡Escribe algo antes de comprobar!",
+        confirmButtonColor: "#6c5ce7",
+      });
+        return; // salir de la función si el campo está vacío
+    }
     if (limpio === invertido && limpio.length > 0) {
 
         Swal.fire({
